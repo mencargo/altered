@@ -3,7 +3,7 @@
    Flowplayer v5.4.2 (Monday, 27. May 2013 12:52PM) | flowplayer.org/license
 
 */
-!function($) { 
+!function($) {
 
 /*
    jQuery.browser for 1.9+
@@ -110,7 +110,7 @@ $.extend(flowplayer, {
       // initial volume level
       volume: typeof localStorage != "object" ? 1 : localStorage.muted == "true" ? 0 : !isNaN(localStorage.volume) ? localStorage.volume || 1 : 1,
 
-      // http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#error-codes
+      // https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#error-codes
       errors: [
 
          // video exceptions
@@ -129,7 +129,7 @@ $.extend(flowplayer, {
          'Unsupported video format. Try installing Adobe Flash.'
       ],
       errorUrls: ['','','','','','','','','','',
-         'http://get.adobe.com/flashplayer/'
+         'https://get.adobe.com/flashplayer/'
       ],
       playlist: []
 
@@ -2253,7 +2253,7 @@ flowplayer(function(player, root) {
 
             tracker._setAllowLinker(true);
 
-            // http://code.google.com/apis/analytics/docs/tracking/eventTrackerGuide.html
+            // https://code.google.com/apis/analytics/docs/tracking/eventTrackerGuide.html
             tracker._trackEvent(
                "Video / Seconds played",
                player.engine + "/" + video.type,
@@ -2460,4 +2460,4 @@ $.fn.fptip = function(trigger, active) {
 };
 
 }(jQuery);
-flowplayer(function(e,o){function a(e){var o=n("<a/>")[0];return o.href=e,o.hostname}var n=jQuery,l=e.conf,t=l.swf.indexOf("flowplayer.org")&&l.e&&o.data("origin"),r=t?a(t):location.hostname,i=l.key;if("file:"==location.protocol&&(r="localhost"),e.load.ed=1,l.hostname=r,l.origin=t||location.href,t&&o.addClass("is-embedded"),"string"==typeof i&&(i=i.split(/,\s*/)),i&&"function"==typeof key_check&&key_check(i,r))l.logo&&o.append(n("<a>",{"class":"fp-logo",href:t}).append(n("<img/>",{src:l.logo})));else{var s=n("<a/>").attr("href","http://flowplayer.org").appendTo(o);n(".fp-controls",o),e.bind("pause resume finish unload",function(o){var a=l.url?l.url.indexOf("://my.flowplayer.org"):-1;/pause|resume/.test(o.type)&&"flash"!=e.engine&&4!=a&&5!=a?(s.show().css({position:"absolute",left:16,bottom:36,zIndex:99999,width:100,height:20,backgroundImage:"url("+[".png","logo","/",".net",".cloudfront","d32wqyuo10o653","//"].reverse().join("")+")"}),e.load.ed=s.is(":visible"),e.load.ed||e.pause()):s.hide()})}});
+flowplayer(function(e,o){function a(e){var o=n("<a/>")[0];return o.href=e,o.hostname}var n=jQuery,l=e.conf,t=l.swf.indexOf("flowplayer.org")&&l.e&&o.data("origin"),r=t?a(t):location.hostname,i=l.key;if("file:"==location.protocol&&(r="localhost"),e.load.ed=1,l.hostname=r,l.origin=t||location.href,t&&o.addClass("is-embedded"),"string"==typeof i&&(i=i.split(/,\s*/)),i&&"function"==typeof key_check&&key_check(i,r))l.logo&&o.append(n("<a>",{"class":"fp-logo",href:t}).append(n("<img/>",{src:l.logo})));else{var s=n("<a/>").attr("href","https://flowplayer.org").appendTo(o);n(".fp-controls",o),e.bind("pause resume finish unload",function(o){var a=l.url?l.url.indexOf("://my.flowplayer.org"):-1;/pause|resume/.test(o.type)&&"flash"!=e.engine&&4!=a&&5!=a?(s.show().css({position:"absolute",left:16,bottom:36,zIndex:99999,width:100,height:20,backgroundImage:"url("+[".png","logo","/",".net",".cloudfront","d32wqyuo10o653","//"].reverse().join("")+")"}),e.load.ed=s.is(":visible"),e.load.ed||e.pause()):s.hide()})}});

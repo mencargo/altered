@@ -1,10 +1,10 @@
-/* Background gallery by http://manos.malihu.gr */
+/* Background gallery by https://manos.malihu.gr */
 //config
 //set default images view mode
 $defaultViewMode="full"; //full, normal, original
-$tsMargin=30; //first and last thumbnail margin (for better cursor interaction) 
-$scrollEasing=600; //scroll easing amount (0 for no easing) 
-$scrollEasingType="easeOutCirc"; //scroll easing type 
+$tsMargin=30; //first and last thumbnail margin (for better cursor interaction)
+$scrollEasing=600; //scroll easing amount (0 for no easing)
+$scrollEasingType="easeOutCirc"; //scroll easing type
 $thumbnailsContainerOpacity=0.8; //thumbnails area default opacity
 $thumbnailsContainerMouseOutOpacity=0; //thumbnails area opacity on mouse out
 $thumbnailsOpacity=0.6; //thumbnails default opacity
@@ -41,10 +41,10 @@ $(window).load(function() {
 	$thumbScroller.css("width",sliderWidth);
 	var totalContent=0;
 	fadeSpeed=200;
-	
+
 	var $the_outer_container=document.getElementById("outer_container");
 	var $placement=findPos($the_outer_container);
-	
+
 	$thumbScroller_content.each(function () {
 		var $this=$(this);
 		totalContent+=$this.innerWidth();
@@ -64,7 +64,7 @@ $(window).load(function() {
 	  		} else if(mouseCoords<destX){
 		  		$thumbScroller_container.stop().animate({left: thePosB}, $scrollEasing,$scrollEasingType); //with easing
 	  		} else {
-				$thumbScroller_container.stop();  
+				$thumbScroller_container.stop();
 	  		}
 		}
 	});
@@ -95,7 +95,7 @@ $(window).load(function() {
 	//on window resize scale image and reset thumbnail scroller
 	$(window).resize(function() {
 		FullScreenBackground("#bgimg",$bgimg.data("newImageW"),$bgimg.data("newImageH"));
-		$thumbScroller_container.stop().animate({left: sliderLeft}, 400,"easeOutCirc"); 
+		$thumbScroller_container.stop().animate({left: sliderLeft}, 400,"easeOutCirc");
 		var newWidth=$outer_container.width();
 		$thumbScroller.css("width",newWidth);
 		sliderWidth=newWidth;
@@ -152,7 +152,7 @@ $("#outer_container a").click(function(event){
 	GetImageTitle($this);
 	SwitchImage(this);
 	ShowHideNextPrev("show");
-}); 
+});
 
 //next/prev images buttons
 $nextImageBtn.click(function(event){
